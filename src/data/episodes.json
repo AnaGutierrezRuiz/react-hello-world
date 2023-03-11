@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "El Cocinero",
+    "description": "El testigo principal de Liz desaparece...",
+    "image": "https://picsum.photos/id/237/300/200"
+  },
+  {
+    "id": 2,
+    "name": "El Cocinero 2: La venganza",
+    "description": "El testigo principal de Liz desaparece...",
+    "image": "https://picsum.photos/id/2/300/200"
+  }
+]
