@@ -15,11 +15,24 @@ function EpisodeList() {
 
   const handleReload = () => setReload((prev) => !prev);
 
+  const handleDeleteEpisode = (id) => {
+    console.log(`Deleting episode ${id}`)
+    setEpisodes((prev) => prev.filter(episode => episode.id !== id))
+  }
+
   return (
-    <div onClick={handleReload}>
-      {episodes.map((episode) => (<EpisodeItem key={episode.id} {...episode} />))}
+    <div>
+      <button className='btn btn-primary' onClick={handleReload}>reload</button>
+      {episodes.map((episode) => (
+        <EpisodeItem key={episode.id} {...episode} onClickDelete={(event) => handleDeleteEpisode(episode.id)} />
+      ))}
     </div>
   )
 }
+
+
+setTimeout(() => {
+
+}, 1000)
 
 export default EpisodeList

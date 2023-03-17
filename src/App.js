@@ -5,12 +5,16 @@ import EpisodeList from "./components/episodes/EpisodeList";
 import Filters from "./components/Filters";
 import Navbar from "./components/Navbar";
 import Section from "./components/Section";
+import TodoList from "./components/todos/TodoList";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <div className="container">
+        <Section className="mb-5" title="Todo List">
+          <TodoList/>
+        </Section>
         <Section className="mb-5" title="Buttons">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid modi dolores eum, nesciunt iure delectus quae perferendis sapiente labore facilis explicabo dignissimos, distinctio quam doloribus sunt pariatur, ad dolor non.</p>
           <Button text="click me" className="mb-1" icon="user" />
