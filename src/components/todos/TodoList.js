@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import TodoForm from './TodoForm'
-import TodoItem from './TodoItem'
+import React, { useState } from 'react';
+import TodoForm from './TodoForm';
 
 function TodoList() {
-  const [tasks, setTasks] = useState(["holi"])
+
+  const [tasks, setTasks] = useState([]);
 
   const handleTaskCreated = (task) => {
     setTasks((prev) => {
@@ -14,18 +14,14 @@ function TodoList() {
     })
   }
 
-  const handleDeleteTask = (task) => {
-    setTasks((prev) => prev.filter(t => t !== task ))
-  }
-
   return (
     <>
-      <TodoForm onTaskCreated={handleTaskCreated}/>
+      <TodoForm onTaskcreated = {handleTaskCreated} />
       <ul>
-        {tasks.map((task) => (<TodoItem key={task} task={task} onDeleteTask={() => handleDeleteTask(task)} />))}
+        {tasks.map((task) => <TodoItem task={task} key={task} />)}
       </ul>
     </>
-  )
+  );
 }
 
-export default TodoList
+export default TodoList;

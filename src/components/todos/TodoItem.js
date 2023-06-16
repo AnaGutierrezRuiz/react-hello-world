@@ -1,13 +1,9 @@
 import React from 'react'
 
-function TodoItem({ task, onDeleteTask }) {
+function TodoItem() {
   return (
-    <li onClick={onDeleteTask}>{task}</li>
+    <li>{task}</li>
   )
 }
-
-TodoItem.defaultValue = {
-  onDeleteTask: () => {}
-} 
 
 export default TodoItem
