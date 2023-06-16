@@ -1,8 +1,8 @@
 import React from 'react'
 
-function TodoItem() {
+function TodoItem(task, onDeleteTask) {
   return (
-    <li>{task}</li>
+    <li onClick={onDeleteTask}>{task}</li>
   )
 }
 
