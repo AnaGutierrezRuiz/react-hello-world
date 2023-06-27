@@ -1,30 +1,27 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function TodoForm({ onTaskCreated }) {
+  const [tasks, setTasks] = useState('');
 
-  const [task, setTask] = useState('');
   const handleChange = (event) => {
     const { value } = event.target;
-    setTasks(value); 
-  }
+    setTasks(value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    onTaskcreated(task);
-    setTask('');
-  }
+    onTaskCreated(task);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type='text' value={task} onChange={handleChange}/>
-      <button className='btn btn-outline-secondary' type='submit' id='button addon2'><i className='fa fa-edit'></i></button>
+      <input type='text' value={task} onChange={handleChange} />
+      <button type='submit'>Submit</button>
     </form>
-  )
+  );
 }
 
 TodoForm.defaultProps = {
-  onTaskCreated:  () => {
-
-  }
-}
-
-export default TodoForm
+  onTaskCreated: () => {}
+};
+export default TodoForm;
