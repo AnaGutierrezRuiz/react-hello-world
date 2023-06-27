@@ -14,12 +14,15 @@ function TodoList() {
     })
   }
 
+  const handleDeleteTask = (task) {
+    setTasks((prev) => prev.filter(t => t !== task))
+  }
   
   return (
     <>
       <TodoForm onTaskcreated = {handleTaskCreated} />
       <ul>
-        {tasks.map((task) => <TodoItem task={task} key={task} />)}
+        {tasks.map((task) => <TodoItem key={task} task={task} onDeleteTask={() => handleDeleteTask(task)} />)}
       </ul>
     </>
   );
